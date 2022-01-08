@@ -1,3 +1,43 @@
 .navigation{
-  background-color: teal;
+  margin: 32px 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.primarySection{
+  display: flex;
+  align-items: center;
+}
+
+.addMovieButton{
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.addMovieIcon{
+  margin-right: 12px;
+  margin-left: 64px;
+}
+
+.secondarySection{
+  display: flex;
+  align-items: center;
+}
+
+.desktopImage{ margin-right: 40px }
+.addMovieMobileButton{ display: none }
+
+@media only screen and (max-width: 1023px) {
+  .navigation{ margin: 40px 24px }
+  .addMovieMobileButton{ display: block }
+  .desktopImage, .addMovieButton{ display: none }
 }

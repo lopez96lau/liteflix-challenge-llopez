@@ -1,5 +1,6 @@
 import './App.css'; 
 import './normalize.css';
+import 'typeface-bebas-neue';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import Movies from './components/Movies';
