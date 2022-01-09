@@ -9,8 +9,8 @@ import AddMovieModal from './components/AddMovieModal';
 function App() {
   return (
     <div className="App">
-      <Navigation />
       <Home />
+      <Navigation />
       <Movies />
       <AddMovieModal />
     </div>

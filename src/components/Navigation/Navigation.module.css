@@ -1,5 +1,5 @@
 .navigation{
-  margin: 32px 104px;
+  margin: 2rem 6.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,36 +8,36 @@
 .primarySection{
   display: flex;
   align-items: center;
+  z-index: 0;
 }
 
 .addMovieButton{
   font-family: 'Bebas Neue';
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 18px;
-  letter-spacing: 4px;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.25rem;
   color: #FFFFFF;
   cursor: pointer;
   display: flex;
   align-items: center;
+  margin-top: 0.313rem;
 }
 
-.addMovieIcon{
-  margin-right: 12px;
-  margin-left: 64px;
-}
+.addMovieIcon{ margin: 0 0.75rem 0.313rem 4rem }
 
 .secondarySection{
   display: flex;
   align-items: center;
+  z-index: 0;
 }
 
-.desktopImage{ margin-right: 40px }
-.addMovieMobileButton{ display: none }
+.desktopImage{ margin-right: 2.5rem }
+.addMovieMobileButton{ display: none; z-index: 0;}
 
 @media only screen and (max-width: 1023px) {
-  .navigation{ margin: 40px 24px }
-  .addMovieMobileButton{ display: block }
+  .navigation{ margin: 2.5rem 1.5rem }
+  .addMovieMobileButton{ display: block; cursor: pointer }
   .desktopImage, .addMovieButton{ display: none }
 }
