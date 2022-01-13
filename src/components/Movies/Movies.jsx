@@ -6,14 +6,16 @@ import axios from 'axios';
 import styles from './Movies.module.css';
 
 const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
+const IMG_URL = "https://image.tmdb.org/t/p/w500/";
 const client = axios.create({
   baseURL: 'https://api.themoviedb.org/3/tv/popular?api_key=' + API_KEY
 });
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
+  const [featured, setFeatured] = useState([]);
   const [source, setSource] = useState("featured");
-
+  
   const movieSource = [
     {
       label: 'Populares',
@@ -29,7 +31,9 @@ const Movies = () => {
     client.get()
       .then(response =>{
         // Filter long titles in order to avoid UI malfunctions
-        setMovies(response.data.results.filter(movie => movie.name.length < 15));
+        let moviesData = response.data?.results?.filter(movie => movie.name.length < 15 && movie.backdrop_path);
+        setMovies(moviesData);
+        setFeatured(moviesData);
       })
       .catch(error =>{
         console.log(error);
@@ -44,6 +48,34 @@ const Movies = () => {
 
   function selectSource(s){
     setSource(s.value);
+    if (s.value == "featured") {
+      setMovies(featured);
+    } else {
+      const items = { ...localStorage };
+      var myMovies = [];
+      Object.keys(items).forEach(key => {
+        var movieData = {
+          name: key,
+          image: localStorage.getItem(key),
+          rating: "N/A",
+          year: ""
+        }
+        myMovies.push(movieData);
+      });
+      setMovies(myMovies);
+    }
+  }
+
+  function getMovieImage(movie){
+    return source == "featured" ? IMG_URL + movie.backdrop_path : movie.image;
+  }
+
+  function getMovieRating(movie){
+    return source == "featured" ? movie.vote_average : movie.rating;
+  }
+
+  function getMovieYear(movie){
+    return source == "featured" ? movie.first_air_date.slice(0,4) : movie.year;
   }
 
   return (
@@ -95,7 +127,12 @@ const Movies = () => {
 
          {movies.length && selectPopularMovies(movies, 4).map((movie, i) => (
            <Animated animationIn="pulse" animationInDuration={1200} isVisible={true} key={i}>
-              <MovieBox movie={movie} />
+              <MovieBox
+                title={movie.name}
+                image={getMovieImage(movie)}
+                rating={getMovieRating(movie)}
+                year={getMovieYear(movie)}
+              />
            </Animated>
          ))}
       </div>

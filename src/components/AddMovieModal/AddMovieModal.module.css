@@ -12,6 +12,10 @@
   font-family: Bebas Neue;
 }
 
+.mobileHeader{
+  display: none;
+}
+
 .closeButton {
   width:100%;
   display: flex;
@@ -43,6 +47,10 @@
   margin: 3rem 0;
 }
 
+.movieDndContainer > label {
+  border: none !important;
+}
+
 .movieDnd {
   display: flex;
   align-items: center;
@@ -68,6 +76,11 @@
 .progressAction a {
   cursor: pointer;
 }
+
+.progressAction span {
+  color: #64EEBC;
+}
+
 .progressBar {
   margin: 1rem 0;
 }
@@ -80,8 +93,8 @@
 }
 
 .movieTitle {
-  width: 253px;
-  padding-right: 5px;
+  width: 15.813rem;
+  padding-right: 0.313rem;
 }
 
 .movieTitle input {
@@ -100,6 +113,11 @@
 
 .movieTitle input :focus-visible, :focus {
   outline: none;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
 }
 
 .actions button {
@@ -124,6 +142,10 @@
   cursor: not-allowed;
 }
 
+.actions > .closeModalBtn {
+  display: none;
+}
+
 @media only screen and (max-width: 1023px) {
   .addMovieModal {
     width: 90vw;
@@ -133,5 +155,31 @@
     min-height: 0;
     min-width: 0;
     overflow: hidden;
+  }
+
+  .mobileHeader {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .mobileHeader img {
+    display: block;
+  }
+
+  .closeButton {
+    display: none;
+  }
+
+  .modalTitle {
+    margin-top: 6rem;
+  }
+
+  .actions > .closeModalBtn {
+    display: block;
+    color: white;
+    background: rgb(36, 36, 36);
+    border: 1px solid white;
+    opacity: 0.5;
   }
 }

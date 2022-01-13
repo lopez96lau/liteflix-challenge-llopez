@@ -20,7 +20,7 @@ const Home = () => {
     client.get()
       .then(response =>{
         // Filter long titles in order to avoid UI malfunctions
-        setMovies(response.data.results.filter(movie => movie.title.length < 15));
+        setMovies(response.data.results.filter(movie => movie.title.length < 15 && movie.backdrop_path));
       })
       .catch(error =>{
         console.log(error);

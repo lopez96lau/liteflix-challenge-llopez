@@ -5,16 +5,14 @@ import playIconMiniHover from '../../assets/play-mini-hover.svg';
 import star from '../../assets/star.svg';
 import styles from './MovieBox.module.css';
 
-const IMG_URL = "https://image.tmdb.org/t/p/w500/";
-
-const MovieBox = ({movie}) => {
+const MovieBox = ({title, image, rating, year}) => {
   const [style, setStyle] = useState({visibility: 'hidden'});
   const [mini, setMini] = useState(false);
 
   return (
     <div className={styles.container}>
       <div className={styles.box}>
-        <img className={styles.container} src={IMG_URL + movie.backdrop_path} alt={movie.title} />
+        <img className={styles.container} src={image} alt={title} />
       </div>
 
       <div className={styles.boxTop} onMouseEnter={e => {setStyle({visibility: 'visible'})}} onMouseLeave={e => {setStyle({visibility: 'hidden'})}}>
@@ -26,15 +24,15 @@ const MovieBox = ({movie}) => {
         <div className={styles.boxBottom} style={style}>
           <div className={styles.title}  onMouseEnter={e => {setMini(true)}} onMouseLeave={e => {setMini(false)}}>
             <img src={mini ? playIconMiniHover : playIconMini } alt=""/>
-            {movie.name}
+            {title}
           </div>
 
           <div className={styles.info}>
             <div className={styles.rating}>
               <img src={star} alt=""></img>
-              {movie.vote_average}
+              {rating}
             </div>
-            {movie.first_air_date.slice(0,4)}
+            {year}
           </div>
         </div>
       </div>
