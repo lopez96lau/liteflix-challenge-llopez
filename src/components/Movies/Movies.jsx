@@ -102,7 +102,7 @@ const Movies = () => {
                 margin: "0",
                 fontSize: "1.125rem",
                 fontWeight: "bold",
-                paddingLeft: "1.25rem",
+                paddingLeft: "0.25rem",
               },
               list: {
                 backgroundColor: "#242424",
