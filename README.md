@@ -2,7 +2,8 @@
 ![enter image description here](https://liteflix-challenge-llopez.herokuapp.com/static/media/liteflix.7e304b0d0d1cfe7d37aa1f43dff275cc.svg)
 
 Desarrollado con React.js por [Laureano López](https://www.linkedin.com/in/lopezlaureanogonzalo/), durante Enero de 2022.
-Acceso público: https://liteflix-challenge-llopez.herokuapp.com/
+
+**Acceso público:** https://liteflix-challenge-llopez.herokuapp.com/
 
 ## Caso
 
