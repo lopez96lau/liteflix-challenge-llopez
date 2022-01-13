@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Litebox Challenge
+![enter image description here](https://liteflix-challenge-llopez.herokuapp.com/static/media/liteflix.7e304b0d0d1cfe7d37aa1f43dff275cc.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Desarrollado con React.js por [Laureano López](https://www.linkedin.com/in/lopezlaureanogonzalo/), durante Enero de 2022.
+Acceso público: https://liteflix-challenge-llopez.herokuapp.com/
 
-## Available Scripts
+## Caso
 
-In the project directory, you can run:
+El proyecto consiste en el desarrollo un **Catálogo de Películas** dinámico.
 
-### `npm start`
+Se deberá listar una película destacada, y películas populares provenientes de una API pública.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Sin embargo, el catálogo puede ser actualizado por el usuario, pudiendo agregar nuevas películas a la categoría “Mis Películas”. No se dispone de un endpoint para agregar nuevas películas, sino que simplemente deben guardarse imágenes en localStorage.
+## Capturas
+![enter image description here](https://i.ibb.co/TW2Q3Tg/Captura.jpg)
+![https://i.ibb.co/K2d6xRV/Improvementsss.jpg](https://i.ibb.co/K2d6xRV/Improvementsss.jpg)![https://i.ibb.co/7vHsXm2/Captursa.jpg](https://i.ibb.co/7vHsXm2/Captursa.jpg)
+## Consideraciones
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ - No se utilizó una librería de componentes, ya que para la finalidad del challenge, se prefirió crear componentes estilizados puros en CSS, importando solo aquellos que presentaban un alto grado de complejidad.
+ - Se utilizaron los endpoints brindados por Litebox para las consultas al API de TMDB. Para probar localmente, agregar el API Key requerido para comunicarse con dicho endpoint.
+ - Dada que la persistencia se realiza en localStorage, para "simular" el proceso de error y éxito en la carga de la imagen, se consideró que **toda película cuyo nombre no incluya "Liteflix" en su título causará un error en la subida**. Probar con distintos nombres para verificar que la funcionalidad anda correctamente.
+ - Las imágenes y películas mostradas son aleatorias de los resultados arrojados por TMDB. Se sesgaron aquellas películas con nombres muy largos que podrían ocasionar problemas en la interfaz de usuario.
+ - La implementación se llevó a cabo persiguiendo principios de Responsive Design. Se utilizó un total aproximado de 35 horas para el desarrollo.
+## Tengo un problema
+Cualquier inconveniente, duda o bug, por favor avisar a lopez96lau@gmail.com para poder darle solución inmediata.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Si llegaste hasta acá, **muchas gracias**! Que lo disfrutes! ![:hugging_face:](https://a.slack-edge.com/production-standard-emoji-assets/13.0/google-medium/1f917@2x.png)
