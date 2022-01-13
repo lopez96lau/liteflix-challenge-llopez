@@ -12,7 +12,7 @@
   font-family: Bebas Neue;
 }
 
-.mobileHeader{
+.mobileHeader {
   display: none;
 }
 
@@ -36,7 +36,7 @@
   color: #242424;
   background-color: #E5E5E5;
   padding: 1.25rem 3.5rem;
-  margin-top: 5.75rem;
+  margin-top: 5.7rem;
   border: none;
   box-shadow: none;
   cursor: pointer;
@@ -61,7 +61,7 @@
   font-size: 1.5rem;
   line-height: 1.625rem;
   letter-spacing: 0.25rem;
-  margin-top: 4.5rem;
+  margin-top: 6.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -97,4 +97,9 @@
   .message {
     margin-top: 12rem;
   }
+
+  .actions button {
+      margin-top: 7.625rem;
+  }
+    
 }
